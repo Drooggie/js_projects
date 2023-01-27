@@ -1,0 +1,35 @@
+body {
+    background: url(../andrei-riabovitchev-red-boat-003.jpg) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .main {
+    background: url(../andrei-riabovitchev-study-f-004.jpg) center center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 0 10px rgb(217, 217, 217);
+  }
+  
+  
+  .tablet {
+    color: white;
+  }
+  
+  .btn {
+    color: black;
+    background-color: rgba(177, 177, 177, 0.5);
+  }uttons .btn-org {
+    background-color: rgba(255, 166, 0, 0.5);
+  }
+  .buttons .btn-light {
+    background-color: rgba(248, 248, 248, 0.5);
+  }
+
+
+.theme span{
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0 10px rgb(33, 33, 33);
+}
+
+.theme span[data-theme="dark"] {
+    display: none;
+}

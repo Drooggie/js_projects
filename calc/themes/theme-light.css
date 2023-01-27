@@ -1,0 +1,34 @@
+  body {
+    background: url(../andrei-riabovitchev-th-2020-002-ar.jpg) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .main {
+    background: url(../p4.jpg) center center no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 0 10px #333;
+  }
+  
+  
+  .tablet {
+    color: black;
+  }
+  
+  .btn {
+    color: white;
+    background-color: rgba(51, 51, 51, 0.5);
+  }uttons .btn-org {
+    background-color: rgba(255, 166, 0, 0.5);
+  }
+  .buttons .btn-light {
+    background-color: rgba(169, 169, 169, 0.5);
+  }
+
+  .theme span{
+    background-color: #333;
+    box-shadow: 0 0 10px #333;
+  }
+
+  .theme span[data-theme="light"] {
+    display: none;
+  }
