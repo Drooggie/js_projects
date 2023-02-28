@@ -1,0 +1,49 @@
+canvas {
+    border: 1px solid crimson;
+    margin: 0;
+    cursor: none;
+}
+.canvas {
+
+&__container {
+    margin: 20px auto;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+&-toolbox {
+    background-color: crimson;
+    width: 700px;
+    height: 3rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+
+& > * {
+    background-color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin: 0px 3px;
+    cursor: pointer;
+}
+& .canvas__clear {
+    margin-left: auto;
+}
+}
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(./pencil.png);
+    background-position: center;
+    background-size: cover;
+    transition: 0, 1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

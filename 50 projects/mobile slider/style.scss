@@ -1,0 +1,22 @@
+.slider {
+
+&__container {
+    width: 30vw;
+    margin: 100px auto;
+    overflow: hidden;
+}
+&__img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    transition: 1s;
+
+img {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+}
+}

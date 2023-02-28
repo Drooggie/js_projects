@@ -1,0 +1,67 @@
+body {
+    background-color: aquamarine;
+}
+
+.faq-item {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    transition: 0.7s;
+    width: 40%;
+    height: 60px;
+    text-align: left;
+    overflow: hidden;
+    transition: 0.6s;
+    border: 1px solid gray;
+    span {
+        font-weight: 800;
+        transition: 0.6s;
+    }
+    button {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: brown;
+        transition: 0.6s;
+        color: white;
+        border: 0;
+        .fa-xmark {
+            display: none;
+        }
+    }
+    &::before {
+        content: '\f075';
+        font-family: 'Font Awesome 5 Free';
+        position: absolute;
+        top: -50px;
+        left: 20px;
+        color: crimson;
+        opacity: 0;
+        font-size: 12rem;
+        transition: 1s;
+    }
+    &.active {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        height: 200px;
+        span {
+            opacity: 0.7;
+        }
+        button {
+            background-color: crimson;
+            box-shadow: 0 0 10px #333;
+            .fa-xmark {
+                display: inline;
+            }
+            .fa-chevron-down {
+                display: none;
+            }
+        }
+        &::before {
+            opacity: 0.15;
+        }
+    }
+}

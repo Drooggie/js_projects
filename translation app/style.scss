@@ -1,0 +1,93 @@
+body {
+    background-image: linear-gradient(to right,#544a7d, #ffd452);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.translation {
+
+&__box {
+    margin: 100px auto;
+    max-width: 700px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+&__input {
+    width: 50%;
+}
+&__textarea {
+    width: 100%;
+    height: 250px;
+    border: none;
+    padding: 10px;
+    border: 1px solid #333;
+    outline: none;
+    resize: none;
+}
+
+&__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+&:hover {
+    color: #333;
+}
+}
+}
+
+&__language {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+&__btn {
+    width: 100%;
+    height: 40px;
+    background-color: #544a7d;
+    border: none;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+
+&:hover {
+    box-shadow: 0 0 2px #544a7d, 0 0 2px #544a7d;
+}
+}
+
+&__copy {
+    position: relative;
+}
+&__copied {
+    background-color: #544a7d;
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: hide 1s linear forwards;
+}
+
+}
+
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}

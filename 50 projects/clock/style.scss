@@ -1,0 +1,66 @@
+
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+html.dark {
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+html {
+    transition: all 2s ease;
+
+&.dark {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+}
+
+body {
+    background-color: var(--secondary-color);
+    transition: all 2s ease;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: all 2s ease;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 40px 0px;
+    border: 0;
+}
+
+.clock {
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transition: all 2s ease;
+}
+
+.center {
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    transition: all 2s ease;
+    border-radius: 50%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+}
+
+.line {
+    background-color: var(--primary-color);
+    transform-origin: bottom center;
+    transform: rotate(-360deg);
+    transition: 0.2s;
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    left: 49.8%;
+}

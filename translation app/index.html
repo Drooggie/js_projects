@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation app</title>
+    <script src="https://kit.fontawesome.com/d409f2ca3f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="translation">
+        <div class="translation__box">
+
+            <div class="translation__input">
+                <textarea class="translation__textarea" 
+                placeholder="Translation input here"
+                style="border-right-width: 0px;" id="input"></textarea>
+                <div class="translation__footer">
+                    <button class="translation__copy">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                    <button class="translation__sound">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    
+                    <select class="translation__language" id="selectInput">
+                        <option value="en-GB">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="translation__input">
+                <textarea class="translation__textarea" placeholder="Translated" readonly id="output"></textarea>
+
+                <div class="translation__footer">
+
+                    <select class="translation__language" id="selectOutput">
+                        <option value="ru-RU">Russian</option>
+                    </select>
+                    
+                    <button class="translation__sound">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <button class="translation__copy">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button class="translation__btn">Translate</button>
+
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./main.js"></script>
+
+</body>
+</html>

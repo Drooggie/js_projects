@@ -1,0 +1,88 @@
+body {
+  background-color: crimson;
+}
+
+.count__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.count__carousel {
+  width: 140px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.count__carousel-item {
+  animation: carousel 4s linear forwards;
+  transform-origin: bottom left;
+  position: absolute;
+  bottom: 0;
+  left: 62px;
+}
+.count__btn {
+  background-color: aqua;
+  font-weight: 600;
+}
+.count__btn:hover {
+  background-color: rgb(16, 207, 207);
+}
+.count__init {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.count__init_hidden {
+  display: none;
+}
+
+@keyframes carousel {
+  5% {
+    transform: rotate(90deg) scale(0.8);
+  }
+  10% {
+    transform: rotate(270deg);
+  }
+  20% {
+    transform: rotate(345deg);
+  }
+  30% {
+    transform: rotate(350deg) scale(1.8);
+  }
+  33% {
+    transform: rotate(360deg);
+  }
+  38% {
+    transform: rotate(450deg) scale(0.8);
+  }
+  43% {
+    transform: rotate(630deg);
+  }
+  53% {
+    transform: rotate(705deg);
+  }
+  63% {
+    transform: rotate(715deg) scale(1.8);
+  }
+  66% {
+    transform: rotate(720deg);
+  }
+  71% {
+    transform: rotate(810deg) scale(0.8);
+  }
+  81% {
+    transform: rotate(890deg);
+  }
+  85% {
+    transform: rotate(1060deg);
+  }
+  95% {
+    transform: rotate(1075deg) scale(1.8);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}/*# sourceMappingURL=style.css.map */

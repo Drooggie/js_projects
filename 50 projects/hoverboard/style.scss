@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+}
+
+.board {
+
+&__box {
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 1s;
+    
+
+&-item {
+    width: 17px;
+    height: 17px;
+    background-color: #333;
+    margin: 5px;
+
+&.hidden {
+    animation: hidden 2s linear forwards;
+}
+}
+}
+}
+
+@keyframes hidden {
+    10% {
+        transform: scale(1.5);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.5);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    60% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.5);
+    }
+    80% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1.5);
+    }
+    100% {
+        background-color: #333;
+    }
+}

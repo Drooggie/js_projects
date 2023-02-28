@@ -1,0 +1,27 @@
+body {
+    background-color: crimson;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 0px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #333;
+    width: 80%;
+    p {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 30px;
+    }
+}

@@ -1,0 +1,65 @@
+body {
+  background-color: aqua;
+}
+
+.navbar {
+  width: 300px;
+  height: 40px;
+  background-color: white;
+  overflow: hidden;
+  transition: 2s;
+}
+.navbar.active {
+  width: 40px;
+}
+.navbar.active ul {
+  margin-left: 50px;
+}
+.navbar.active span {
+  transform: rotate(0deg);
+  left: 27.2%;
+  background-color: black;
+  box-shadow: none;
+}
+.navbar.active .line-1 {
+  top: 25%;
+}
+.navbar.active .line-2 {
+  top: 65%;
+}
+.navbar ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: 470;
+  transition: 0.3s;
+}
+.navbar ul a:hover {
+  opacity: 0.5;
+}
+.navbar .line {
+  position: absolute;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  right: 5px;
+  transition: 2s;
+}
+.navbar span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: crimson;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 20px;
+  transition: 2s;
+  left: 25%;
+  top: 50%;
+}
+
+.line-1 {
+  transform: rotate(580deg);
+}
+.line-2 {
+  transform: rotate(-580deg);
+}/*# sourceMappingURL=style.css.map */

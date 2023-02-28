@@ -1,0 +1,43 @@
+body {
+  background-color: crimson;
+}
+
+.drag-drop__boxes {
+  margin: 20% 0;
+  display: flex;
+  justify-content: center;
+}
+.drag-drop__item {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin: 0px 10px;
+  transition: 0.5s;
+  position: relative;
+}
+.drag-drop__item_inner {
+  background-image: url(../slider/img/Screenshot_3.png);
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.drag-drop__item_hovered {
+  background-color: gray;
+  border: 4px dotted black;
+  position: relative;
+}
+
+.back {
+  background-image: url(../slider/img/Screenshot_3.png);
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=style.css.map */

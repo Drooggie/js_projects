@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+
+.button__item {
+    width: 100%;
+    height: 500px;
+
+button {
+    background-color: crimson;
+    padding: 20px 40px;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+&:hover {
+    background-color: rgb(160, 24, 51);
+    color: rgb(221, 217, 217);
+}
+}
+
+&_circle {
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    animation: scale 0.5s ease-out;
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}

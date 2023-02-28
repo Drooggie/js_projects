@@ -1,0 +1,100 @@
+body {
+    background-color: crimson;
+}
+
+.count {
+
+&__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+&__carousel {
+    width: 140px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+
+&-item {
+    animation: carousel 4s linear forwards;
+    transform-origin: bottom left;
+    position: absolute;
+    bottom: 0;
+    left: 62px;
+}
+}
+
+&__btn {
+    background-color: aqua;
+    font-weight: 600;
+
+&:hover {
+    background-color: rgb(16, 207, 207);
+}
+}
+
+&__init {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+&_hidden {
+    display: none;
+}
+}
+}
+
+@keyframes carousel {
+    5% {
+        transform: rotate(90deg) scale(0.8);
+    }
+    10% {
+        transform: rotate(270deg);
+    }
+    20% {
+        transform: rotate(345deg);
+    }
+    30% {
+        transform: rotate(350deg) scale(1.8);
+    }
+    33% {
+        transform: rotate(360deg);
+    }
+
+    38% {
+        transform: rotate(450deg) scale(0.8);
+    }
+    43% {
+        transform: rotate(630deg);
+    }
+    53% {
+        transform: rotate(705deg);
+    }
+    63% {
+        transform: rotate(715deg) scale(1.8);
+    }
+    66% {
+        transform: rotate(720deg);
+    }
+
+    71% {
+        transform: rotate(810deg) scale(0.8);
+    }
+    81% {
+        transform: rotate(890deg);
+    }
+    85% {
+        transform: rotate(1060deg);
+    }
+    95% {
+        transform: rotate(1075deg) scale(1.8);
+    }
+    100% {
+        transform: rotate(1080deg);
+    }
+
+}
