@@ -2,8 +2,12 @@ const selects = document.querySelectorAll('.translation__language')
 const copyButtons = document.querySelectorAll('.translation__copy')
 const speechBtn = document.querySelectorAll('.translation__sound')
 const translateBtn = document.querySelector('.translation__btn')
+const textArea = document.querySelector('.translation__text-box')
 const textInput = document.getElementById('input')
 const textOutput = document.getElementById('output')
+
+
+const load = localLoad()
 
 selects.forEach(select => {
     for(let [key, val] of Object.entries(languages)) {
@@ -14,7 +18,7 @@ selects.forEach(select => {
         
         select.appendChild(option)
         select.addEventListener('click', updateLS)
-    }
+    };    
 })
 
 selects[0].selectedIndex = localStorage.getItem('input')
@@ -28,7 +32,9 @@ setEventListener('speech', speechBtn[0], selects[0], textInput)
 setEventListener('speech', speechBtn[1], selects[1], textOutput)
 
 
-translateBtn.addEventListener('click', translate)
+translateBtn.addEventListener('click', translate);
+textArea.addEventListener('mouseover', () => textArea.appendChild(load()))
+textArea.addEventListener('mouseleave', () => textArea.removeChild(load()))
 
 
 function translate() {
@@ -107,12 +113,66 @@ function textToSpeach(from, text) {
     }, 100)
 }
 
+function localLoad() {
+    const load = document.createElement('div')
+    load.classList.add('translation__load')
+    load.innerHTML = `
+        <i class="fa-solid fa-download"></i>
+    `
+
+    load.addEventListener('click', () => {
+
+        const inputLoad = document.createElement('input')
+        inputLoad.classList.add('translation__input-load')
+        inputLoad.setAttribute('type', 'file')
+
+        const select = document.createElement('select')
+        select.id = 'translation__tes-lang'
+        addLangToSelect(select)
+
+        inputLoad.addEventListener('change', () => {
+            const selectedFile = inputLoad.files[0]
+            screenshotToText(selectedFile)
+
+            inputLoad.remove()
+            select.remove()
+        })
+
+        textArea.appendChild(select)
+        textArea.appendChild(inputLoad)
+    })
+
+    return () => {return load}
+}
+
+function addLangToSelect(select) {
+
+    for(let [key, val] of Object.entries(tesLanguages)) {
+        const option = document.createElement('option')
+        option.innerText = key
+        option.setAttribute('value', val)
+    
+        select.appendChild(option)
+    }
+}
+
 function updateLS() {
     localStorage.setItem('input', selects[0].selectedIndex)
     localStorage.setItem('output', selects[1].selectedIndex)
 }
 
-import { languages } from './modules/language.js'
+import { languages, tesLanguages } from './modules/language.js'
 
 // text to speech
 // selected language in LS
+
+function screenshotToText(file) {
+    const selectedLang = document.querySelectorAll('#translation__tes-lang option')[document.querySelector('#translation__tes-lang').selectedIndex].value
+
+    Tesseract.recognize(
+        file,
+        selectedLang,
+      ).then(({ data: { text } }) => {
+        textInput.value = text
+      })
+}

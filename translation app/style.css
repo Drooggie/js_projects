@@ -27,6 +27,24 @@ body {
   outline: none;
   resize: none;
 }
+.translation__text-box {
+  position: relative;
+}
+.translation__input-load {
+  width: 70%;
+}
+.translation__load {
+  position: absolute;
+  bottom: 10%;
+  right: 10px;
+}
+.translation__load i {
+  font-size: 10px;
+  box-shadow: 0 0 10px #afafaf;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .translation__footer {
   display: flex;
   align-items: center;
@@ -43,7 +61,7 @@ body {
 .translation__footer button:hover {
   color: #333;
 }
-.translation__language {
+.translation select {
   border: none;
   outline: none;
   cursor: pointer;

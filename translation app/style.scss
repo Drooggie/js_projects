@@ -30,6 +30,28 @@ body {
     resize: none;
 }
 
+
+&__text-box {
+    position: relative;
+}
+&__input-load {
+    width: 70%;
+}
+&__load {
+    position: absolute;
+    bottom: 10%;
+    right: 10px;
+
+i {
+    font-size: 10px;
+    box-shadow: 0 0 10px #afafaf;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+}
+
+
 &__footer {
     display: flex;
     align-items: center;
@@ -49,7 +71,7 @@ button {
 }
 }
 
-&__language {
+select {
     border: none;
     outline: none;
     cursor: pointer;

@@ -14,9 +14,15 @@
         <div class="translation__box">
 
             <div class="translation__input">
-                <textarea class="translation__textarea" 
-                placeholder="Translation input here"
-                style="border-right-width: 0px;" id="input"></textarea>
+
+                <div class="translation__text-box">
+                    <textarea class="translation__textarea" 
+                    placeholder="Translation input here"
+                    style="border-right-width: 0px;" id="input"></textarea>
+                    <!-- <select id="translation__tes-lang"></select>
+                    <input type="file" class="translation__input-load"> -->
+                </div>
+
                 <div class="translation__footer">
                     <button class="translation__copy">
                         <i class="fa-solid fa-copy"></i>
@@ -29,9 +35,13 @@
                         <option value="en-GB">English</option>
                     </select>
                 </div>
+
+                
+
             </div>
 
             <div class="translation__input">
+
                 <textarea class="translation__textarea" placeholder="Translated" readonly id="output"></textarea>
 
                 <div class="translation__footer">
@@ -55,6 +65,7 @@
     </div>
 
     <link rel="stylesheet" href="./style.css">
+    <script src='https://unpkg.com/tesseract.js@4.0.2/dist/tesseract.min.js'></script>
     <script type="module" src="./main.js"></script>
 
 </body>
