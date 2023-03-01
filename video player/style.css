@@ -1,0 +1,91 @@
+body {
+  background-image: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
+}
+
+.player {
+  width: 800px;
+  margin: 100px auto;
+  display: block;
+  position: relative;
+}
+.player video {
+  width: 100%;
+}
+.player video::-webkit-media-controls {
+  display: none !important;
+}
+.player i {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.player__controls.hide {
+  animation: hide 5s linear forwards;
+}
+.player .options {
+  display: flex;
+  justify-content: space-between;
+}
+.player .options__item {
+  width: 33.333%;
+  display: flex;
+}
+
+.timeline {
+  width: 98%;
+  height: 3px;
+  margin: 1%;
+  background-color: azure;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.timeline:hover {
+  height: 8px;
+}
+.timeline__progress {
+  background-color: blue;
+  height: 100%;
+  width: 0%;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: end;
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+  }
+}
+.speed {
+  font-size: 10px;
+  background-color: white;
+  list-style-type: none;
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+.speed li {
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #333;
+  border-radius: 7px;
+}/*# sourceMappingURL=style.css.map */

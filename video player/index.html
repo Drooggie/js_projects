@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom VideoPlayer</title>
+    <script src="https://kit.fontawesome.com/d409f2ca3f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg">
+</head>
+<body>
+
+    <div class="player">
+        <video src="./Strapped a camera onto a stray cat, to spy on his friends.mp4"></video>
+        <div class="player__controls hide">
+            <div class="timeline">
+                <div class="timeline__progress" id="progress"></div>
+            </div>
+            <div class="options">
+                <div class="options__item">
+                    <i class="fa-solid fa-volume-high" id="mute"></i>
+                    <input type="range" id="volume" min="0" max="1" step="0.01">
+                </div>
+                <div class="options__item center">
+                    <i class="fa-solid fa-backward" id="bwd"></i>
+                    <i class="fa-solid fa-play" id="play"></i>
+                    <i class="fa-solid fa-forward" id="fwd"></i>
+                </div>
+                <div class="options__item right">
+                    <i class="fa-regular fa-circle" id="showSpeed">
+                        <!-- <ul class="speed">
+                            <li class="speed__item" value="0.25">0.25</li>
+                            <li class="speed__item" value="0.50">0.50</li>
+                            <li class="speed__item" value="1">Normal</li>
+                            <li class="speed__item" value="1.50">1.50</li>
+                            <li class="speed__item" value="2">2</li>
+                        </ul> -->
+                    </i>
+                    <i class="fa-solid fa-expand" id="fullscreen"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+
+</body>
+</html>
