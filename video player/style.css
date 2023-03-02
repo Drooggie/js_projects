@@ -56,6 +56,7 @@ body {
   background-color: blue;
   height: 100%;
   width: 0%;
+  transition: 0.2s;
 }
 
 .center {
