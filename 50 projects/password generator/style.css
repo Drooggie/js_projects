@@ -1,0 +1,90 @@
+body {
+  background-color: #41b3a3;
+}
+
+.generator {
+  color: white;
+}
+.generator__container {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+}
+.generator__form {
+  position: relative;
+}
+.generator__form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  font-size: 10px;
+  background-color: #349487;
+  color: white;
+  font-weight: 500;
+  border-radius: 0;
+  height: 60%;
+}
+.generator__form button:hover {
+  background-color: #40b4a5;
+}
+.generator__form-input {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 1s;
+  border-radius: 0;
+  color: white;
+  height: 100%;
+}
+.generator__form-input::-moz-placeholder {
+  color: white;
+  -moz-transition: 1s;
+  transition: 1s;
+  font-size: 12px;
+}
+.generator__form-input::placeholder {
+  color: white;
+  transition: 1s;
+  font-size: 12px;
+}
+.generator__form-input:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: black;
+}
+.generator__form-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.generator__form-input:focus::placeholder {
+  opacity: 0;
+}
+.generator__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.generator__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.generator__list-item p {
+  margin: 0;
+  font-weight: 500;
+}
+.generator__list-item input {
+  width: 40px;
+}
+.generator__btn {
+  background-color: #40b4a5;
+  width: 100%;
+  border-radius: 0;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+.generator__btn:hover {
+  background-color: #349487;
+}/*# sourceMappingURL=style.css.map */

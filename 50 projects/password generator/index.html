@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="generator">
+            <div class="generator__container">
+    
+                <h1 class="generator__title"></h1>
+    
+                <div class="generator__form pb-4">
+                    <input type="text" class="generator__form-input form-control" placeholder="Your password will be here">
+                    <button class="btn generator__form-copy">Copy</button>
+                </div>
+    
+                <ul class="generator__list">
+                    <li class="generator__list-item">
+                        <p>Password length</p>
+                        <input type="number" class="generator__count">
+                    </li>
+                    <li class="generator__list-item">
+                        <p>Include Uppercase letters</p> <input class="upper" type="checkbox">
+                    </li>
+                    <li class="generator__list-item">
+                        <p>Include Lowercase letters</p> <input class="lower" type="checkbox">
+                    </li>
+                    <li class="generator__list-item">
+                        <p>Include numbers</p> <input class="num" type="checkbox">
+                    </li>
+                    <li class="generator__list-item">
+                        <p>Include symbols</p> <input class="sym" type="checkbox">
+                    </li>
+                </ul>
+                
+                <button class="generator__btn btn">Generate Password</button>
+    
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+
+</body>
+</html>
