@@ -1,0 +1,183 @@
+body::before {
+  content: "";
+  background-image: url("./img/forest.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pet {
+  position: relative;
+}
+.pet__container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.pet__card {
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 1s;
+}
+.pet__card:hover {
+  box-shadow: 0 0 2px #333, 0 0 10px #333;
+  transform: scale(1.1);
+}
+.pet__card.hide {
+  display: none;
+}
+.pet__card-img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pet__card-info {
+  padding: 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.pet__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pet__card-header * {
+  margin: 0;
+}
+.pet__id {
+  font-weight: 600;
+  background-color: #dfdfdf;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.pet__species {
+  margin: 20px 0 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: crimson;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.pet__species:hover {
+  box-shadow: 0 0 2px crimson, 0 0 10px crimson;
+  color: white;
+}
+.pet__name {
+  font-size: 20px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 2px #333, 0 0 10px #333;
+  z-index: 2;
+  padding: 20px;
+}
+.header__input {
+  background-color: rgba(255, 208, 0, 0.3);
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  width: 200px;
+  float: right;
+  outline: 0;
+  color: rgb(89, 4, 92);
+  padding: 10px;
+}
+.header__input:focus {
+  box-shadow: 0 0 2px rgb(255, 208, 0), 0 0 10px rgb(255, 208, 0);
+}
+.header__logo {
+  height: 50px;
+}
+
+.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: 1s;
+  opacity: 0;
+  animation: show 1s linear forwards;
+  z-index: 3;
+}
+.show__box {
+  background-color: white;
+  position: absolute;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.show__img {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+.show__info {
+  padding: 20px 20px 50px;
+}
+.show__info-body {
+  max-width: 300px;
+}
+.show__close {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  font-weight: 700;
+}
+.show::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.remove {
+  opacity: 1;
+  animation: remove 1s linear forwards;
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes remove {
+  to {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
